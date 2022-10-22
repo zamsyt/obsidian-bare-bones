@@ -3013,100 +3013,12 @@ body.is-focused .workspace-tab-header .workspace-tab-header-inner-title.is-highl
   padding: 0 8px;
   width: 100%;
 }
-.workspace-tab-header-inner .workspace-tab-header-inner-icon {
-  color: var(--icon-color);
-  opacity: var(--icon-opacity);
-}
-@media (hover: hover) {
-  .workspace-tab-header-inner:hover .workspace-tab-header-inner-icon {
-    color: var(--icon-color-hover);
-    opacity: var(--icon-opacity-hover);
-  }
-}
-.mod-root .workspace-tab-header-inner {
-  padding: 0 3px 0 6px;
-}
-.workspace-tab-header-inner-title {
-  flex: 1 1 auto;
-  font-size: var(--tab-font-size);
-  font-weight: var(--tab-font-weight);
-  overflow: hidden;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 100%;
-}
-.workspace-tab-header-status-container {
-  display: flex;
-  flex-shrink: 0;
-  gap: var(--size-2-1);
-  justify-content: center;
-}
-.workspace-tab-header-status-container:empty {
-  display: none;
-}
-.workspace-tab-header-status-icon,
-.workspace-tab-header-inner-close-button {
-  cursor: var(--cursor);
-  padding: var(--size-2-1);
-  border-radius: var(--radius-s);
-  display: flex;
-  align-items: center;
-  --icon-size: var(--icon-xs);
-  --icon-stroke: var(--icon-xs-stroke-width);
-}
-@media (hover: hover) {
-  .workspace-tab-header.is-active .workspace-tab-header-status-icon:hover,
-  .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-    background-color: var(--background-modifier-hover);
-  }
-  .mod-root .workspace-tab-header.is-active .workspace-tab-header-status-icon.mod-linked:hover,
-  .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button.mod-linked:hover,
-  .mod-root .workspace-tab-header.is-active .workspace-tab-header-status-icon.mod-pinned:hover,
-  .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-close-button.mod-pinned:hover {
-    background-color: var(--background-modifier-active-hover);
-  }
-}
-.workspace-tab-header.is-active .workspace-tab-header-status-icon::after,
-.workspace-tab-header.is-active .workspace-tab-header-inner-close-button::after {
-  background-color: transparent;
-}
-@media (hover: hover) {
-  .workspace-tab-header-inner-close-button:hover {
-    color: var(--text-normal);
-  }
-}
-.workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-  color: var(--text-muted);
-}
-@media (hover: hover) {
-  .workspace-tab-header:hover .workspace-tab-header-inner-close-button:hover {
-    color: var(--text-normal);
-  }
-}
-.workspace-tab-header.is-active .workspace-tab-header-inner-close-button {
-  color: var(--text-muted);
-}
-@media (hover: hover) {
-  .workspace-tab-header.is-active .workspace-tab-header-inner-close-button:hover {
-    color: var(--text-normal);
-  }
-}
-.workspace-sidedock-empty-state {
-  font-size: var(--font-ui-small);
-  padding: 20px 30px;
-}
-.workspace-tab-header.is-before-active .workspace-tab-header-inner {
-  border-bottom-right-radius: 10px;
-}
+
 .workspace-tab-header-spacer {
   display: flex;
   flex-grow: 1;
 }
 body:not(.is-grabbing):not(.is-fullscreen) .workspace-tabs.mod-top .workspace-tab-header-spacer {
-  -webkit-app-region: drag;
-}
-body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
   -webkit-app-region: drag;
 }
 .workspace-tab-header-tab-list,
@@ -3122,35 +3034,6 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .mod-root .workspace-tab-header-new-tab {
   display: flex;
 }
-.workspace-tab-header-tab-list .clickable-icon,
-.workspace-tab-header-new-tab .clickable-icon {
-  color: var(--icon-color);
-  padding: var(--size-2-2);
-  --icon-size: var(--icon-m);
-  --icon-stroke: var(--icon-m-stroke-width);
-  align-items: center;
-}
-.workspace-tab-header-new-tab {
-  padding: var(--size-4-2) 0 var(--size-2-3);
-  margin-right: var(--size-4-3);
-  margin-left: -4px;
-}
-.workspace-tab-header-tab-list {
-  margin-right: var(--size-4-1);
-  padding: var(--size-4-2) 0 var(--size-2-3);
-}
-/* Remove tab titles in sidebar */
-.workspace-fake-target-overlay.is-in-sidebar .workspace-tab-header-inner-title,
-.mod-left-split .workspace-tab-header-inner-title,
-.mod-right-split .workspace-tab-header-inner-title {
-  display: var(--sidebar-tab-text-display);
-}
-.workspace-fake-target-overlay.is-in-sidebar .workspace-tab-header-inner-close-button,
-.mod-left-split .workspace-tab-header-inner-close-button,
-.mod-right-split .workspace-tab-header-inner-close-button {
-  display: none;
-}
-
 .modal-container {
   display: flex;
   align-items: center;
